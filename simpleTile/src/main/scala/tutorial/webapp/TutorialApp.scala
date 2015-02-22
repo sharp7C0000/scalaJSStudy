@@ -57,9 +57,6 @@ object TutorialApp extends JSApp {
 
 	def main() :Unit = {
 
-		// block body scrolling
-		document.body.style.overflow = "hidden"
-
 		// gen and draw static background canvas. this will draw only once
 		drawBackground()
 
@@ -160,13 +157,13 @@ object TutorialApp extends JSApp {
 
 		    val newPlayer = keyCode match {
 		    	// up
-		    	case 38 => Some(getNewPlayer(currentPlayer, 0, -movingInterval))
+		    	case 73 => Some(getNewPlayer(currentPlayer, 0, -movingInterval))
 		    	// down 
-		    	case 40 => Some(getNewPlayer(currentPlayer, 0, movingInterval))
+		    	case 75 => Some(getNewPlayer(currentPlayer, 0, movingInterval))
 		    	// left
-		    	case 37 => Some(getNewPlayer(currentPlayer, -movingInterval, 0))
+		    	case 74 => Some(getNewPlayer(currentPlayer, -movingInterval, 0))
 		    	// right
-		    	case 39 => Some(getNewPlayer(currentPlayer, movingInterval, 0))
+		    	case 76 => Some(getNewPlayer(currentPlayer, movingInterval, 0))
 		    	// other
 		    	case _  => None
 		    }
